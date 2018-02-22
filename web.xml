@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>CheckLogin</servlet-name>
+		<servlet-class>Exercices.Exo1.CheckLogin</servlet-class>
+		<init-param>
+			<param-name>loginInXML</param-name>
+			<param-value>kake</param-value>
+		</init-param>
+		<init-param>
+			<param-name>passwordInXML</param-name>
+			<param-value>leloup</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckLogin</servlet-name>
+		<url-pattern>/checklog</url-pattern>
+	</servlet-mapping>
+	
+	
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>Exercices.Exo1.loginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/Reserver/*</url-pattern>
+	</filter-mapping>
+	
+
+</web-app>
