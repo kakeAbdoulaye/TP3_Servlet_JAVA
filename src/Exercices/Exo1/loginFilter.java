@@ -29,7 +29,7 @@ public class loginFilter implements Filter {
 		HttpServletRequest httpRequest= (HttpServletRequest) request;
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 		HttpSession httpSession = httpRequest.getSession();
-		
+		System.out.println("je suis la mon grand2");
 		String authentification = (String) httpSession.getAttribute("authentifier");
 		
 		if("oui".equals(authentification))
@@ -40,7 +40,7 @@ public class loginFilter implements Filter {
 		{
 			httpResponse.sendRedirect(contextServlet.getContextPath()+"/LoginExo1.html");
 		}
-		System.out.println("je suis la mon grand2");
+		
 	}
 
 	@Override
